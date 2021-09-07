@@ -1,0 +1,20 @@
+{
+  "name": "rest-api-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kamil-96/rest-api-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kamil-96/rest-api-app/issues"
+  },
+  "homepage": "https://github.com/Kamil-96/rest-api-app#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
