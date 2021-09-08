@@ -7,6 +7,9 @@
     "type": "git",
     "url": "git+https://github.com/Kamil-96/rest-api-app.git"
   },
+  "scripts": {
+    "start": "nodemon server.js"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
