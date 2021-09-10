@@ -18,8 +18,14 @@ router.route('/seats').post((req, res) => {
   const item = {id: id, day: convertedDay, seat: convertedSeat, client: client, email: email};
 
   if(day && seat && client && email) {
-    db.seats.push(item);
-    res.json({ message: 'OK' });
+    const checkSeat = db.concerts.filter(item => item.day === convertedDay && item.seat === convertedSeat);
+    
+    if(checkSeat.length) {
+      res.status(404).json({ message: "The slot is already taken..." });
+    } else {
+      db.seats.push(item);
+      res.json({ message: 'OK' });
+    }
   } else {
     res.status(404).json({ message: 'Not found...' });
   }

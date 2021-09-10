@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Kamil-96/rest-api-app#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1"
   }
 }
