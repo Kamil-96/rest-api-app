@@ -9,7 +9,7 @@
   },
   "scripts": {
     "start": "nodemon server.js",
-    "build": "cd client && yarn install && yarn build" 
+    "build": "cd client && yarn install && yarn build"
   },
   "keywords": [],
   "author": "",
@@ -20,6 +20,7 @@
   "homepage": "https://github.com/Kamil-96/rest-api-app#readme",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "nodemon": "^2.0.12"
   }
 }
