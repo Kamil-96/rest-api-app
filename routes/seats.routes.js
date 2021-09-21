@@ -25,6 +25,7 @@ router.route('/seats').post((req, res) => {
     } else {
       db.seats.push(item);
       res.json({ message: 'OK' });
+      req.io.emit('seatsUpdated', db.seats);
     }
   } else {
     res.status(404).json({ message: 'Not found...' });
