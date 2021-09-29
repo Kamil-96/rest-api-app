@@ -39,9 +39,9 @@ app.use((req, res) => {
 const NODE_ENV = process.env.NODE_ENV;
 let dbUri = '';
 
-if(NODE_ENV === 'production') dbUri = 'mongodb+srv://kamil-96:xrtbo93@cluster0.uny44.mongodb.net/NewWaveDB?retryWrites=true&w=majority';
+if(NODE_ENV === 'production') dbUri = `mongodb+srv://${process.env.DB_LOGIN}:${process.env.DB_PASS}@cluster0.uny44.mongodb.net/NewWaveDB?retryWrites=true&w=majority`;
 else if(NODE_ENV === 'test') dbUri = 'mongodb://localhost:27017/NewWaveDBtest';
-else dbUri = 'mongodb+srv://kamil-96:xrtbo93@cluster0.uny44.mongodb.net/NewWaveDB?retryWrites=true&w=majority';
+else dbUri = `mongodb+srv://${process.env.DB_LOGIN}:${process.env.DB_PASS}@cluster0.uny44.mongodb.net/NewWaveDB?retryWrites=true&w=majority`;
 
 mongoose.connect(dbUri, { useNewUrlParser: true, useUnifiedTopology: true });
 const db = mongoose.connection;
