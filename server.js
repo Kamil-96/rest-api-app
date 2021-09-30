@@ -4,6 +4,7 @@ const path = require('path');
 const socket = require('socket.io');
 const mongoose = require('mongoose');
 require('dotenv').config();
+const helmet = require('helmet');
 
 const app = express();
 
@@ -14,6 +15,7 @@ const seatsRoutes = require('./routes/seats.routes');
 app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(helmet());
 
 app.use((req, res, next) => {
   req.io = io;
